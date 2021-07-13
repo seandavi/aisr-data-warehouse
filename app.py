@@ -4,7 +4,6 @@ from fastapi import (
     File, UploadFile
 )
 from typing import List
-from dicomweb import dicomweb_store_instance
 import json
 import pydicom
 from dicomweb_client.api import DICOMwebClient
