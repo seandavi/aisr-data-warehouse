@@ -14,6 +14,8 @@ google-cloud-pubsub = "^2.6.1"
 google-api-python-client = "^2.12.0"
 python-multipart = "^0.0.5"
 xmltodict = "^0.12.0"
+dicomweb-client = {extras = ["gcp"], version = "^0.52.0"}
+pydicom = "^2.1.2"
 
 [tool.poetry.dev-dependencies]
 pulumi = "^3.6.1"
