@@ -16,6 +16,7 @@ import argparse
 import json
 import os
 import google
+import xmltodict
 
 # [START healthcare_dicomweb_store_instance]
 def dicomweb_store_instance(project_id, location, dataset_id, dicom_store_id, dcm_file_contents):
@@ -67,9 +68,10 @@ def dicomweb_store_instance(project_id, location, dataset_id, dicom_store_id, dc
 
     response = session.post(dicomweb_path, data=dcm_content, headers=headers)
     response.raise_for_status()
+    print(response.status_code)
     print("Stored DICOM instance:")
     print(response.text)
-    return {"response":response.text}
+    return {"response":xmltodict.parse(response.text,attr_prefix='',cdata_key='cdata')}
 
 
 # [END healthcare_dicomweb_store_instance]
