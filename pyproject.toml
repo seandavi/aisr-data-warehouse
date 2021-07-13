@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "aisr-data-warehouse"
+version = "0.1.0"
+description = ""
+authors = ["Sean Davis <seandavi@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.66.0"
+google-auth = "^1.32.1"
+requests = "^2.25.1"
+google-cloud-pubsub = "^2.6.1"
+google-api-python-client = "^2.12.0"
+python-multipart = "^0.0.5"
+
+[tool.poetry.dev-dependencies]
+pulumi = "^3.6.1"
+pulumi-google-native = "^0.5.0"
+uvicorn = "^0.14.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

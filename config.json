@@ -1,0 +1,10 @@
+{
+  "bq_dataset_name": "uccc_aisr",
+  "bq_table_name": "dicom",
+  "bucket_name": "gs://uccc-aisr-6ba0308",
+  "dicom_store_name": "uccc-aisr-ba50ed5",
+  "healthcare_dataset_name": "uccc-aisr-b67a21b",
+  "project": "uccc-aisr",
+  "pubsub_subscription": "new_dicom_subscription-35ba285",
+  "pubsub_topic": "new_dicom-6cf70ea"
+}

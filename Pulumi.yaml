@@ -1,0 +1,6 @@
+name: aisr-data-warehouse
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: AISR Data Warehouse
