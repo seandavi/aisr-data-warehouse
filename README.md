@@ -19,4 +19,4 @@ curl -X POST \
 
 ## Data Flow
 
-![AISR Data Warehouse Data Flow](dataflow.svg]
+![AISR Data Warehouse Data Flow](dataflow.svg)
