@@ -16,3 +16,7 @@ curl -X POST \
 ```
 
 ![AISR Data Warehouse Architecture](architecture.svg)
+
+## Data Flow
+
+![AISR Data Warehouse Data Flow](dataflow.svg]
