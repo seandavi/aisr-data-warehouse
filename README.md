@@ -7,3 +7,12 @@ curl -X POST \
     https://healthcare.googleapis.com/v1/projects/uccc-aisr/locations/us-central1/datasets/uccc-aisr-b67a21b/dicomStores/uccc-aisr-ba50ed5/dicomWeb/studies \
     --data-binary @0009.DCM
 ```
+
+
+## Architecture
+
+```
+./generate_arch_diagram.sh
+```
+
+![AISR Data Warehouse Architecture](architecture.svg)
