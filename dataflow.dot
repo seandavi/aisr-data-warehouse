@@ -1,0 +1,17 @@
+digraph g {
+    node [shape=record];
+    a1 [label="X-ray/CT/MRI\nImages"];
+    b1 [label="original\nDICOM"];
+    b2 [label="Deidentified\nDICOM"];
+    d1 [label="Bigquery & other\nDatabases"];
+    d2 [label="ML/AI models"];
+    v1 [label="DICOM Viewer"];
+    d3 [label="Image Analysis"]
+    a1 -> b1 -> b2;
+    b2 -> v1 [label="DICOMWeb\nAPI"];
+    v1 -> b2 [label="Annotated images\nsaved\nas new images"]
+    b2 -> d1;
+    d1 -> d2 [label="Bigquery ML"];
+    b2 -> d3 -> b2; 
+
+}
