@@ -105,7 +105,6 @@ binding = gcp.cloudrun.IamBinding("binding",
     members=["allUsers"])
 
 # Exports
-pulumi.export('project',project)
 pulumi.export('bucket_name', bucket.url)
 pulumi.export('healthcare_dataset_name',healthcare_dataset.name)
 pulumi.export('dicom_store_name',dicom_store.name)
