@@ -2,7 +2,7 @@
 name = "arpeggio"
 version = "1.10.2"
 description = "Packrat parser interpreter"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -25,7 +25,7 @@ tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
 name = "attrs"
 version = "21.2.0"
 description = "Classes Without Boilerplate"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -130,7 +130,7 @@ gcp = ["google-auth (>=1.6)", "google-oauth (>=1.0)"]
 name = "dill"
 version = "0.3.4"
 description = "serialize all of python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*"
 
@@ -361,7 +361,7 @@ pyparsing = ">=2.0.2"
 name = "parver"
 version = "0.3.1"
 description = "Parse and manipulate version numbers."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -404,7 +404,7 @@ six = ">=1.9"
 name = "pulumi"
 version = "3.6.1"
 description = "Pulumi's Python SDK"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -415,6 +415,19 @@ protobuf = ">=3.6.0"
 pyyaml = ">=5.3.1"
 semver = ">=2.8.1"
 six = ">=1.12.0"
+
+[[package]]
+name = "pulumi-docker"
+version = "3.0.0"
+description = "A Pulumi package for interacting with Docker in Pulumi programs"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+parver = ">=0.2.1"
+pulumi = ">=3.0.0,<4.0.0"
+semver = ">=2.8.1"
 
 [[package]]
 name = "pulumi-google-native"
@@ -574,7 +587,7 @@ pyasn1 = ">=0.1.3"
 name = "semver"
 version = "2.13.0"
 description = "Python helper for Semantic Versioning (http://semver.org/)"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -665,7 +678,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "cba08e6e5589315322e297855b76b079ee352e29e2381367258f2d5fd83f36bd"
+content-hash = "7f3ecc8ccf53e81b5a4fec886d6dcb7f9bf7f69fbbd904495deea1893ae9dd97"
 
 [metadata.files]
 arpeggio = [
@@ -920,6 +933,9 @@ protobuf = [
 ]
 pulumi = [
     {file = "pulumi-3.6.1-py2.py3-none-any.whl", hash = "sha256:976a9ae49829e1e00be78e3021be9bf1c5564450969ab2cfdce64b23d83e84b7"},
+]
+pulumi-docker = [
+    {file = "pulumi_docker-3.0.0.tar.gz", hash = "sha256:dda0592a42cd11061f5295fb81f794b5eb4ab11a502b6ee7c6325d77c158ebc0"},
 ]
 pulumi-google-native = [
     {file = "pulumi_google_native-0.5.0.tar.gz", hash = "sha256:95729f1d0aa726732c29359308a4217e36100699f840a03c896d094fc32eb904"},
