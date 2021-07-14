@@ -1,0 +1,40 @@
+strict digraph {
+    overlap=scale;
+node [shape=record];
+
+    Resource0 [label="pulumi:pulumi:Stack::aisr-data-warehouse-dev"];
+    Resource1 [label="gcp:bigquery/dataset:Dataset::uccc_aisr"];
+    Resource1 -> Resource2 [color = "#246C60", label = "datasetId"];
+    Resource1 -> Resource0 [color = "#AA6639"];
+    Resource3 [label="gcp:projects/service:Service::enable_cloud_run"];
+    Resource3 -> Resource4 [color = "#246C60"];
+    Resource3 -> Resource0 [color = "#AA6639"];
+    Resource5 [label="gcp:pubsub/subscription:Subscription::new_dicom_subscription"];
+    Resource5 -> Resource0 [color = "#AA6639"];
+    Resource6 [label="pulumi:providers:gcp::default_5_11_0"];
+    Resource7 [label="gcp:healthcare/dataset:Dataset::uccc-aisr"];
+    Resource7 -> Resource8 [color = "#246C60", label = "dataset"];
+    Resource7 -> Resource0 [color = "#AA6639"];
+    Resource2 [label="gcp:bigquery/table:Table::dicom"];
+    Resource2 -> Resource0 [color = "#AA6639"];
+    Resource8 [label="gcp:healthcare/dicomStore:DicomStore::uccc-aisr"];
+    Resource8 -> Resource0 [color = "#AA6639"];
+    Resource9 [label="docker:image:Image::ohif-viewer"];
+    Resource9 -> Resource0 [color = "#AA6639"];
+    Resource9 -> Resource4 [color = "#246C60"];
+    Resource10 [label="gcp:storage/bucket:Bucket::uccc-aisr"];
+    Resource10 -> Resource0 [color = "#AA6639"];
+    Resource11 [label="gcp:pubsub/topic:Topic::new_dicom"];
+    Resource11 -> Resource8 [color = "#246C60", label = "notificationConfig"];
+    Resource11 -> Resource0 [color = "#AA6639"];
+    Resource11 -> Resource5 [color = "#246C60", label = "topic"];
+    Resource12 [label="gcp:cloudrun/iamBinding:IamBinding::binding"];
+    Resource12 -> Resource0 [color = "#AA6639"];
+    Resource13 [label="gcp:container/registry:Registry::image_registry"];
+    Resource13 -> Resource4 [color = "#246C60", label = "template"];
+    Resource13 -> Resource0 [color = "#AA6639"];
+    Resource14 [label="pulumi:providers:gcp::default"];
+    Resource4 [label="gcp:cloudrun/service:Service::ohif-viewer"];
+    Resource4 -> Resource12 [color = "#246C60", label = "project, service, location"];
+    Resource4 -> Resource0 [color = "#AA6639"];
+}
