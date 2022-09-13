@@ -8,7 +8,9 @@
 - [Google Cloud PubSub](https://cloud.google.com/pubsub)
 - [OHIF Dicom Image Viewer](https://ohif.org/)
 
-## Add a dicom file to GCP dicom store
+## Usage
+
+1. Add an image to the dicom store
 
 ``` sh
 curl -X POST \
@@ -17,6 +19,12 @@ curl -X POST \
     https://healthcare.googleapis.com/v1/projects/uccc-aisr/locations/us-central1/datasets/uccc-aisr-b67a21b/dicomStores/uccc-aisr-ba50ed5/dicomWeb/studies \
     --data-binary @0009.DCM
 ```
+
+2. Pipeline runs
+- deidenfify
+- Register DICOM metadata in Bigquery
+
+3. Access images via OHIF browser
 
 
 ## Architecture
