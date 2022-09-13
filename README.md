@@ -1,4 +1,14 @@
-### Add a dicom file to GCP dicom store
+## Technologies used
+
+- [Cloud Run serverless web platform](https://cloud.google.com/run)
+- [GCP DICOM, part of the HealthCare API](https://cloud.google.com/healthcare-api/docs/concepts/dicom)
+- [DICOM Deidentification API](https://cloud.google.com/healthcare-api/docs/how-tos/dicom-deidentify)
+- [Google Cloud Bigquery](https://cloud.google.com/bigquery)
+- [Google Cloud Storage](https://cloud.google.com/storage)
+- [Google Cloud PubSub](https://cloud.google.com/pubsub)
+- [OHIF Dicom Image Viewer](https://ohif.org/)
+
+## Add a dicom file to GCP dicom store
 
 ``` sh
 curl -X POST \
